@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mounika Yalamarty — AI/ML Engineer</title>
-  <meta name="description" content="Personal site and portfolio — inspired by oanaignat.github.io" />
+  <meta name="description" content="AI/ML Engineer building reliable LLM platforms, evaluation pipelines, and scalable services." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,26 +26,13 @@
     nav .links a.active, nav .links a:hover{color:var(--fg)}
     .hero{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center;padding:42px 24px 18px}
 
-    /* NEW: circular frame that shows full image without cropping */
+    /* Circular frame that keeps the whole image visible */
     .avatar-frame{
-      width:140px;
-      height:140px;
-      border-radius:50%;
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#000;             /* background behind image if aspect ratio differs */
-      border:2px solid #2a3145;
-      box-shadow:var(--shadow);
+      width:140px;height:140px;border-radius:50%;
+      overflow:hidden;display:flex;align-items:center;justify-content:center;
+      background:#000;border:2px solid #2a3145;box-shadow:var(--shadow)
     }
-    /* UPDATED: image scales to fit inside frame */
-    .avatar{
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      display:block;
-    }
+    .avatar{width:100%;height:auto;object-fit:contain;display:block}
 
     h1{font-size:38px;line-height:1.15;margin:0}
     .subtitle{color:var(--muted);font-size:16px;margin-top:8px}
@@ -78,7 +65,7 @@
       .grid.cols-2{grid-template-columns:1fr}
       .two-col{grid-template-columns:1fr}
       .hero{grid-template-columns:100px 1fr}
-      .avatar-frame{width:100px;height:100px}  /* responsive avatar */
+      .avatar-frame{width:100px;height:100px}
     }
   </style>
 </head>
@@ -91,6 +78,7 @@
         <a href="#news">News</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </div>
@@ -100,19 +88,18 @@
   <main class="container">
     <!-- Hero -->
     <section class="hero card">
-      <!-- Wrap the img so the full picture stays visible inside a circle -->
       <div class="avatar-frame">
         <img class="avatar" src="assets/avatar.jpg" alt="Mounika Yalamarty" />
       </div>
-
       <div>
         <h1>Hi, I'm <span style="color:var(--accent)">Mounika Yalamarty</span></h1>
         <div class="subtitle">AI/ML Engineer • Full-Stack Developer • Systems Builder</div>
         <div class="chips">
-          <span class="chip">RAG & Agents</span>
-          <span class="chip">Evaluation & Observability</span>
+          <span class="chip">LLM Platforms</span>
+          <span class="chip">LangChain & OpenAI Evals</span>
+          <span class="chip">Azure ML • AWS • GCP</span>
           <span class="chip">FastAPI / React</span>
-          <span class="chip">Kubernetes</span>
+          <span class="chip">Docker • Kubernetes</span>
         </div>
         <div class="cta">
           <a class="btn" href="#contact">Get in touch</a>
@@ -127,18 +114,18 @@
       <div class="two-col">
         <div class="card">
           <p>
-            I build reliable, production-grade AI systems and the tooling around them—evaluation, observability, and CI for prompts/agents. At Microsoft (Project Sophia) I designed LLM pipelines with automated evaluation, monitoring, and regression testing, and applied MLOps best practices (versioning, CI/CD, Docker/Kubernetes, Prometheus/Grafana). Previously, I worked on multi-agent multicultural text-to-image research at Santa Clara University and shipped high-scale microservices and UI systems at PropertyGuru.
+            I build reliable, production-grade AI systems and the tooling around them—evaluation, observability, and CI for prompts/agents. At Microsoft, I design LLM platform pipelines (Project Sophia) with automated evaluation, monitoring, and regression testing, applying MLOps best practices such as model versioning, CI/CD with GitHub Actions, containerization with Docker/Kubernetes, and metrics via Prometheus/Grafana. Previously I worked on multi-agent multicultural text-to-image research at Santa Clara University and shipped high-scale microservices and UI systems at PropertyGuru.
           </p>
           <ul>
-            <li class="bullet"><strong>Current:</strong> Software Engineer, AI/ML at <em>Microsoft</em> (Feb 2025–Present)</li>
-            <li class="bullet"><strong>Education:</strong> M.S. Computer Science, Santa Clara University · M.Tech Software Engineering, NUS · B.E. Computer Science, Osmania University</li>
-            <li class="bullet"><strong>Interests:</strong> RAG & agents, evaluation, developer platforms</li>
+            <li class="bullet"><strong>Current:</strong> Software Engineer, AI/ML — Microsoft (Feb 2025–Present)</li>
+            <li class="bullet"><strong>Education:</strong> M.S. Computer Science, Santa Clara University (GPA 3.8) • M.Tech Software Engineering, NUS (GPA 3.9) • B.E. Computer Science, Osmania University (GPA 4.0)</li>
+            <li class="bullet"><strong>Focus:</strong> LLM evaluation, multi-agent systems, production ML platforms</li>
           </ul>
           <a class="resume-link" href="Resume.pdf" target="_blank">📄 Full Resume</a>
           <div class="kpis">
-            <div class="kpi"><div class="n">40%↓</div><div class="tag">Query latency (Reviews svc)</div></div>
+            <div class="kpi"><div class="n">+8K</div><div class="tag">Concurrent users served</div></div>
             <div class="kpi"><div class="n">+40%</div><div class="tag">Lead conversions</div></div>
-            <div class="kpi"><div class="n">8k+</div><div class="tag">Concurrent users</div></div>
+            <div class="kpi"><div class="n">35%↓</div><div class="tag">Response time</div></div>
             <div class="kpi"><div class="n">60%↓</div><div class="tag">Manual QA (Cypress)</div></div>
           </div>
         </div>
@@ -146,14 +133,14 @@
           <div class="card">
             <h3 class="item-title">Highlights</h3>
             <ul>
-              <li class="bullet">LLM eval pipelines (OpenAI Evals, LangChain) with regression tests</li>
-              <li class="bullet">Deep-research/RAG harness: RAGAS/DeepEval + Arena pairwise judging</li>
-              <li class="bullet">ES → Mongo migration with zero downtime (PropertyGuru)</li>
+              <li class="bullet">Designed deployment-ready LLM pipelines with evaluation/monitoring/regression testing (Project Sophia).</li>
+              <li class="bullet">Defined accuracy/coherence/helpfulness metrics and automated prompt-regression in CI.</li>
+              <li class="bullet">Built streaming APIs and micro-frontends; ES→Mongo improvements with faster queries and higher conversions.</li>
             </ul>
           </div>
           <div class="card">
             <h3 class="item-title">Links</h3>
-            <p class="item-sub"><a href="mailto:mounika.yrs@gmail.com">mounika.yrs@gmail.com</a> · <a href="https://www.linkedin.com/in/sumithra-mounika-yalamarty/">LinkedIn</a> · <a href="https://github.com/monyal25">GitHub</a></p>
+            <p class="item-sub"><a href="mailto:mounika.yrs@gmail.com">mounika.yrs@gmail.com</a> · <a href="https://www.linkedin.com/in/sumithra-mounika-yalamarty/" target="_blank">LinkedIn</a> · <a href="https://github.com/monyal25" target="_blank">GitHub</a></p>
           </div>
         </div>
       </div>
@@ -164,9 +151,9 @@
       <h2 class="section-title">Latest News</h2>
       <div class="news grid cols-2">
         <div class="card"><time>Feb 2025</time><p>Joined Microsoft as Software Engineer, AI/ML; building LLM platform (Project Sophia) with evaluation & monitoring.</p></div>
-        <div class="card"><time>Feb 2025</time><p>Co-authored multicultural text-to-image research using AltDiffusion; released dataset (arXiv).</p></div>
-        <div class="card"><time>Mar 2023</time><p>Delivered ES→Mongo migration for Agent Reviews at PropertyGuru; 40% faster queries.</p></div>
-        <div class="card"><time>Jun 2021</time><p>Cut manual QA by 60% with Cypress at Illumina.</p></div>
+        <div class="card"><time>Feb 2025</time><p>Co-authored multicultural text-to-image research using AltDiffusion; 9k-image dataset across five countries and five languages. <a href="https://arxiv.org/pdf/2502.15972" target="_blank">arXiv</a></p></div>
+        <div class="card"><time>Mar 2023</time><p>Delivered ES→Mongo improvements for Agent Reviews at PropertyGuru with faster queries and higher conversions.</p></div>
+        <div class="card"><time>Jun 2021</time><p>Cut manual QA by 60% with Cypress at Illumina; accelerated release cycles.</p></div>
       </div>
     </section>
 
@@ -178,46 +165,47 @@
           <h3 class="item-title">Software Engineer, AI/ML — <em>Microsoft</em></h3>
           <p class="item-sub">Feb 2025 – Present · Project Sophia (LLM platform)</p>
           <ul>
-            <li class="bullet">Designed deployment-ready LLM pipelines with evaluation, monitoring, and regression testing.</li>
-            <li class="bullet">Defined quality metrics (accuracy, coherence, helpfulness) and automated prompt regression in CI.</li>
-            <li class="bullet">MLOps: versioning, GitHub Actions, Docker/Kubernetes, Prometheus/Grafana.</li>
+            <li class="bullet">Designed LLM pipelines using Python, LangChain, OpenAI Evals, and Azure ML with evaluation, monitoring, and regression testing.</li>
+            <li class="bullet">Defined evaluation metrics (accuracy, coherence, helpfulness) and automated prompt-regression testing pipelines.</li>
+            <li class="bullet">Applied MLOps: model versioning, GitHub Actions, Docker/Kubernetes, Prometheus/Grafana.</li>
           </ul>
         </div>
         <div class="card">
           <h3 class="item-title">Research Assistant — <em>Santa Clara University</em></h3>
           <p class="item-sub">Dec 2024 – Feb 2025 · Multi-agent multicultural T2I</p>
           <ul>
-            <li class="bullet">Developed multi-agent models (AltDiffusion) on a 9k-image dataset across 5 countries & 5 languages.</li>
+            <li class="bullet">Developed multi-agent models (AltDiffusion) on a 9k-image dataset spanning 5 countries, multiple demographics, and 5 languages to enhance representation. <a href="https://arxiv.org/pdf/2502.15972" target="_blank">arXiv</a></li>
           </ul>
         </div>
         <div class="card">
           <h3 class="item-title">Senior Software Engineer — <em>PropertyGuru</em></h3>
           <p class="item-sub">Jul 2021 – Mar 2023 · FastAPI microservices, Hive UI</p>
           <ul>
-            <li class="bullet">Re-architected Reviews service (ES→Mongo); reduced p95 latency by ~40%.</li>
-            <li class="bullet">Built real-time streaming APIs serving 8k+ concurrent users; +40% lead conversions.</li>
-            <li class="bullet">Modernized legacy systems with micro-frontends (Hive UI) and CI/CD (Jenkins, Docker, K8s).</li>
+            <li class="bullet">Built scalable micro-frontends (Hive UI) and FastAPI-based microservices; modernized legacy systems.</li>
+            <li class="bullet">Owned CI/CD with Jenkins, Docker, Kubernetes; enabled rapid, reliable deployment of AI/ML services.</li>
+            <li class="bullet">Developed real-time streaming APIs serving 8K+ concurrent users with low-latency responses; +35% faster responses and +40% lead conversions.</li>
           </ul>
         </div>
         <div class="card">
           <h3 class="item-title">Software Engineer 2 — <em>Illumina</em></h3>
           <p class="item-sub">Jun 2020 – Jun 2021 · Secure microservices</p>
           <ul>
-            <li class="bullet">C#/.NET services with OAuth2 via Keycloak, K3s; Cypress tests cut manual QA by 60%.</li>
+            <li class="bullet">C#/.NET services with OAuth2 via Keycloak and K3s; improved auth and scalability.</li>
+            <li class="bullet">Refactored LRM Framework and added Cypress tests, reducing manual QA by 60%.</li>
           </ul>
         </div>
         <div class="card">
           <h3 class="item-title">Software Engineer Intern — <em>Land Transport Authority</em></h3>
           <p class="item-sub">Jan 2020 – May 2020 · Mobility analytics</p>
           <ul>
-            <li class="bullet">Built ML to predict transportation modes; optimized AWS Lambda CI/CD; −20% manual analysis time.</li>
+            <li class="bullet">Analyzed Singapore travel patterns using GPS/multi-sensor data; built ML mode-prediction and real-time feedback; optimized AWS Lambda CI/CD to cut manual analysis time by 20%.</li>
           </ul>
         </div>
         <div class="card">
           <h3 class="item-title">Software Engineer — <em>Arcesium (D.E. Shaw Group)</em></h3>
           <p class="item-sub">Jun 2016 – Jun 2019 · Post-trade systems</p>
           <ul>
-            <li class="bullet">Developed APIs for post-trade workflows; client onboarding; derivatives/rates domain.</li>
+            <li class="bullet">Developed APIs for post-trade workflows and client onboarding; experience across swaps, derivatives, and rates.</li>
           </ul>
         </div>
       </div>
@@ -228,23 +216,28 @@
       <h2 class="section-title">Selected Projects</h2>
       <div class="grid cols-2">
         <div class="card">
-          <h3 class="item-title">Deep-Research Eval Harness</h3>
-          <p class="item-sub">RAG multi-agent · RAGAS/DeepEval · Arena style</p>
-          <p>Pairwise win-rate judging with blinded A/B, bootstrap CIs, Bradley-Terry rankings; step metrics for hop coverage & attribution precision.</p>
-          <p><a href="https://github.com/monyal25" target="_blank">GitHub</a></p>
+          <h3 class="item-title">Project Sophia — LLM Evaluation Pipelines</h3>
+          <p class="item-sub">Microsoft · LangChain · OpenAI Evals · Azure ML</p>
+          <p>Deployment-ready pipelines with automated evaluation, monitoring, and prompt-regression testing; metrics for accuracy, coherence, helpfulness.</p>
         </div>
         <div class="card">
           <h3 class="item-title">Hive UI & Microservices</h3>
           <p class="item-sub">PropertyGuru · FastAPI · Micro-frontends</p>
-          <p>Modernized legacy systems; 35% faster responses and +40% conversions.</p>
-          <p><a href="https://propertyguru.tech/how-and-why-we-created-hive-ui-a-design-system-for-our-future-of-products-746e58b0b014" target="_blank">Blog</a></p>
+          <p>Modernized legacy systems; streaming APIs for 8k+ concurrent users; improved response times and conversions. <a href="https://propertyguru.tech/how-and-why-we-created-hive-ui-a-design-system-for-our-future-of-products-746e58b0b014" target="_blank">Blog</a></p>
         </div>
-        <div class="card">
-          <h3 class="item-title">Multicultural T2I (AltDiffusion)</h3>
-          <p class="item-sub">Santa Clara University · Research</p>
-          <p>Multi-agent prompting over 9k images across 5 countries & 5 languages to improve representation.</p>
-          <p><a href="https://arxiv.org/pdf/2502.15972" target="_blank">arXiv</a></p>
-        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="anchor">
+      <h2 class="section-title">Skills</h2>
+      <div class="card">
+        <ul>
+          <li class="bullet"><strong>Languages:</strong> Python, Java, C++, C, PHP, JavaScript/TypeScript, C#, React, HTML/CSS</li>
+          <li class="bullet"><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL, Redis, DynamoDB</li>
+          <li class="bullet"><strong>AI/ML:</strong> PyTorch, TensorFlow, Transformers, LangChain, OpenAI Evals, MLflow, Multi-Agent Systems, Prompt Engineering</li>
+          <li class="bullet"><strong>Cloud & DevOps:</strong> AWS, Azure ML, GCP, Docker, Kubernetes, Terraform, Helm, Jenkins, GitHub Actions, Kafka, Kinesis, Prometheus/Grafana</li>
+        </ul>
       </div>
     </section>
 
@@ -262,8 +255,8 @@
     <section id="contact" class="anchor">
       <h2 class="section-title">Contact</h2>
       <div class="card">
-        <p>Email: <a href="mailto:mounika.yrs@gmail.com">mounika.yrs@gmail.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/sumithra-mounika-yalamarty/" target="_blank">/in/sumithra-mounika-yalamarty</a> · GitHub: <a href="https://github.com/monyal25" target="_blank">@monyal25</a></p>
-        <p>Open to collaborating on AI evaluation, RAG/agents, and full-stack infra projects.</p>
+        <p>Phone: <a href="tel:+14255204900">+1 425-520-4900</a> · Email: <a href="mailto:mounika.yrs@gmail.com">mounika.yrs@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sumithra-mounika-yalamarty/" target="_blank">/in/sumithra-mounika-yalamarty</a> · GitHub: <a href="https://github.com/monyal25" target="_blank">@monyal25</a></p>
       </div>
     </section>
   </main>
