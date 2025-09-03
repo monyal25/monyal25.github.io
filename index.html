@@ -25,7 +25,28 @@
     nav .links a{margin:0 10px;font-weight:500;color:var(--muted)}
     nav .links a.active, nav .links a:hover{color:var(--fg)}
     .hero{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center;padding:42px 24px 18px}
-    .avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:2px solid #2a3145;box-shadow:var(--shadow)}
+
+    /* NEW: circular frame that shows full image without cropping */
+    .avatar-frame{
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#000;             /* background behind image if aspect ratio differs */
+      border:2px solid #2a3145;
+      box-shadow:var(--shadow);
+    }
+    /* UPDATED: image scales to fit inside frame */
+    .avatar{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      display:block;
+    }
+
     h1{font-size:38px;line-height:1.15;margin:0}
     .subtitle{color:var(--muted);font-size:16px;margin-top:8px}
     .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
@@ -52,11 +73,12 @@
     .tag{font-size:12px;color:#b8c2d7}
     .resume-link{display:inline-flex;align-items:center;gap:8px;margin-top:8px}
     .anchor{scroll-margin-top:90px}
+
     @media (max-width:820px){
       .grid.cols-2{grid-template-columns:1fr}
       .two-col{grid-template-columns:1fr}
       .hero{grid-template-columns:100px 1fr}
-      .avatar{width:100px;height:100px}
+      .avatar-frame{width:100px;height:100px}  /* responsive avatar */
     }
   </style>
 </head>
@@ -78,7 +100,10 @@
   <main class="container">
     <!-- Hero -->
     <section class="hero card">
-      <img class="avatar" src="assets/avatar.jpg" alt="avatar" />
+      <!-- Wrap the img so the full picture stays visible inside a circle -->
+      <div class="avatar-frame">
+        <img class="avatar" src="assets/avatar.jpg" alt="Mounika Yalamarty" />
+      </div>
 
       <div>
         <h1>Hi, I'm <span style="color:var(--accent)">Mounika Yalamarty</span></h1>
