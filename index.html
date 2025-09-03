@@ -30,9 +30,9 @@
     .avatar-frame{
       width:140px;height:140px;border-radius:50%;
       overflow:hidden;display:flex;align-items:center;justify-content:center;
-      background:#000;border:2px solid #2a3145;box-shadow:var(--shadow)
+      background: url("assets/avatar.jpg") center center / contain no-repeat;border:2px solid #2a3145;box-shadow:var(--shadow)
     }
-    .avatar{width:100%;height:auto;object-fit:contain;display:block}
+    
 
     h1{font-size:38px;line-height:1.15;margin:0}
     .subtitle{color:var(--muted);font-size:16px;margin-top:8px}
@@ -88,9 +88,7 @@
   <main class="container">
     <!-- Hero -->
     <section class="hero card">
-      <div class="avatar-frame">
-        <img class="avatar" src="assets/avatar.jpg" alt="Mounika Yalamarty" />
-      </div>
+      <div class="avatar-frame"/>
       <div>
         <h1>Hi, I'm <span style="color:var(--accent)">Mounika Yalamarty</span></h1>
         <div class="subtitle">AI/ML Engineer • Full-Stack Developer • Systems Builder</div>
